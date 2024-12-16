@@ -15,6 +15,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install ldid
+        uses: MOZGIII/install-ldid-action@master
+        with:
+          tag: v2.1.5-procursus7
+
       - name: build
         run: make TARGET=ios
 
